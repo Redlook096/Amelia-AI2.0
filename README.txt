@@ -26,3 +26,6 @@ Now you have set up the file, this is how to run it next time you use it:
 3) Enter command: python3 Amelia2.0.py
 Now you are running our chatbot!
 
+© 2024 Redlook096. All rights reserved.
+
+This work is protected under international and federal copyright laws and treaties. Any unauthorized use, reproduction, or distribution of this work is prohibited without express written permission from the copyright owner.
