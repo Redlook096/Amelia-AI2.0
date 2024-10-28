@@ -68,7 +68,8 @@ def update():
     sys.stdout.write('\033[2K')
     sys.stdout.flush()
     print("Update: Complete")
-#Function for bot to print tnb  ext like ChatGPT
+
+#Function for bot to print text like ChatGPT
 def bot_print(text):
     for char in text:
         print(char, end='', flush=True)
@@ -151,37 +152,12 @@ time.sleep(0.5)
 sys.stdout.write('\033[1A')
 sys.stdout.write('\033[2K')
 sys.stdout.flush()
-print("Booting: Amelia Matrix")
-time.sleep(0.5)
+for i in tqdm(range(100), desc="Booting", ascii=" █"):
+        time.sleep(0.005)
 sys.stdout.write('\033[1A')
 sys.stdout.write('\033[2K')
 sys.stdout.flush()
-print("Booting: Amelia Matrix.")
-time.sleep(0.5)
-sys.stdout.write('\033[1A')
-sys.stdout.write('\033[2K')
-sys.stdout.flush()
-print("Booting: Amelia Matrix..")
-time.sleep(0.5)
-sys.stdout.write('\033[1A')
-sys.stdout.write('\033[2K')
-sys.stdout.flush()
-print("Booting: Amelia Matrix...")
-time.sleep(0.5)
-sys.stdout.write('\033[1A')
-sys.stdout.write('\033[2K')
-sys.stdout.flush()
-print("Booting: Amelia Matrix")
-time.sleep(0.5)
-sys.stdout.write('\033[1A')
-sys.stdout.write('\033[2K')
-sys.stdout.flush()
-print("Booting: Amelia Matrix.")
-time.sleep(0.5)
-sys.stdout.write('\033[1A')
-sys.stdout.write('\033[2K')
-sys.stdout.flush()
-print("Booting: Complete")
+print("Booting: 100%|")
 
 #If user has used chatbot proceed
 if os.path.exists(filename):
@@ -224,6 +200,8 @@ while True:
             file.write(username)
     elif re.search(r"\bhow are you", chat):
         bot_print("Amelia: l am doing great, how about you?")
+    elif re.search(r"\bwho is this\b", chat):
+        bot_print("Amelia: l am Amelia, your Artificual Intelligence assistant")
     elif "ok" in chat:
         pass
     elif re.search(r"\bgood\b", chat):
@@ -292,9 +270,26 @@ while True:
                 time.sleep(0.01)
             bot_print("Amelia: Data has been erased, goodbye")
             exit()
-
+            exit()
         else:
             bot_print("Amelia: Ok, account termination canceled")
+    
+    #Sensoring Inappropriate Language
+    elif re.search(r"\bfuck\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
+    elif re.search(r"\bdick\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
+    elif re.search(r"\bbitch\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
+    elif re.search(r"\bslut\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
+    elif re.search(r"\bchink\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
+    elif re.search(r"\bass\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
+    elif re.search(r"\bgay\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
+    
     #Ending Chat Script
     elif re.search(r"\bend chat\b", chat):
         bot_print("Amelia: Our conversation is going to end. Good bye")
