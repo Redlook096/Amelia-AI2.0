@@ -80,7 +80,7 @@ def bot_print(text):
 os.system('clear' if os == 'nt' else 'cls')
 bot_print("Amelia AI [Version 2.0.22631.4169]")
 time.sleep(0.1)
-bot_print("(c) Redlook096. All rights reserved.")
+bot_print("(c) Ace Coders. All rights reserved.")
 time.sleep(0.1)
 
 
@@ -289,7 +289,20 @@ while True:
         bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
     elif re.search(r"\bgay\b", chat):
         bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
-    
+    elif re.search(r"\bnigger\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
+    elif re.search(r"\bshit\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
+    elif re.search(r"\brape\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
+    elif re.search(r"\bcock\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
+    elif re.search(r"\bpenis\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
+    elif re.search(r"\bpussy\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
+    elif re.search(r"\bvigina\b", chat):
+        bot_print("Amelia: Sorry, l cannot respond to that as it goes against my guide lines")
     #Ending Chat Script
     elif re.search(r"\bend chat\b", chat):
         bot_print("Amelia: Our conversation is going to end. Good bye")
