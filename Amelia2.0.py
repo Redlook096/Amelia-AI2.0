@@ -7,6 +7,7 @@ from datetime import datetime
 import subprocess
 
 filename = 'username.txt'
+passfile = 'password.txt'
 
 def restart():
     subprocess.run(['python', 'Amelia_runner.py'])
@@ -164,7 +165,23 @@ if os.path.exists(filename):
     with open(filename, 'r') as file:
         username = file.read()
         time.sleep(0.3)
-        bot_print(f"Amelia: Hello there {username}, how can l assist you?")
+        bot_print(f"Amelia: Hello there {username}, please enter your password to login")
+        #Ask user to enter password
+        with open(passfile, 'r') as file:
+            password = file.read()
+        security = input("Enter Password: ")
+        time.sleep(0.1)
+        if security == password:
+            sys.stdout.write('\033[1A')
+            sys.stdout.write('\033[2K')
+            sys.stdout.flush()
+            print("Enter Password: ******")
+            bot_print(f"Amelia: Hello there {username}, how can l assist you?")
+        else:
+            bot_print("Amelia: Password is incorrect, program will now end")
+            exit()
+
+    
    
 #If user is new, set up username
 else:
@@ -177,6 +194,15 @@ else:
         with open(filename, 'w') as file:
             file.write(username)
         bot_print(f"Amelia: Hello there, {username}, l am Amelia your Artifical Intelligence Assistant")
+        #Ask user to create password
+        bot_print("Amelia: For your security, please create a password")
+        password = input("Enter New Password: ")
+        sys.stdout.write('\033[1A')
+        sys.stdout.write('\033[2K')
+        sys.stdout.flush()
+        print("Enter Password: ******")
+        with open(passfile, 'w') as file:
+            file.write(password)
         bot_print(f"Amelia: How can l assist you?")
 
 
@@ -239,33 +265,12 @@ while True:
         bot_print("Amelia: It's my pleasure to assist you")
     elif re.search(r"\bwho are you\b", chat):
         bot_print("Amelia: l am Amelia, your Artifical Intelligence Assistant")
-    #Script for Amelia to acsess users files and directories
-    elif re.search(r"\bwhere am l\b", chat):
-        dir = os.getcwd()
-        bot_print(f"Amelia: Your current directory is {dir}")
-    elif re.search(r"\bcurrent directory\b", chat):
-        dir = os.getcwd()
-        bot_print(f"Amelia: Your current directory is {dir}")
-    elif re.search(r"\blist\b", chat):
-        dir = os.getcwd()
-        list = f"Amelia: Files and directories inside '{dir}': ", os.listdir()
-        bot_print(list)
-    elif re.search(r"\bchange directory\b", chat):
-        bot_print("Amelia: Please enter the name of the directory you wish to switch to")
-        dirchange = input("Enter Directory you wish to change to:")
-        try:
-            os.chdir(dirchange)
-            bot_print(f"Amelia: Directory has been changed to {dirchange}")
-        except FileNotFoundError:
-            bot_print(f"Amelia: The directory '{dirchange}' was not found.")
-    elif re.search(r"\bgo back\b", chat):
-        os.system('cd ..')
-        bot_print("Amelia: Ok, I've moved back one directory")
     elif re.search(r"\bdelete my account\b", chat):
         bot_print("Amelia: Are you sure you would like to delete your acount?")
         chat = input(f"{username}: ")
         if re.search(r"\byes\b", chat):
             os.remove(filename)
+            os.remove(passfile)
             for i in tqdm(range(100), desc="Erasing Data", ascii=" █"):
                 time.sleep(0.01)
             bot_print("Amelia: Data has been erased, goodbye")
@@ -311,7 +316,7 @@ while True:
     elif re.search(r"\breboot\b", chat):
         bot_print("Amelia: l will reboot my system")
         time.sleep(0.1)
-        for i in tqdm(range(100), desc="Reloading Data", ascii=" █"):
+        for i in tqdm(range(100), desc="Reloading Data", ascii=" █"): 
             time.sleep(0.01)
         sys.stdout.write('\033[1A')
         sys.stdout.write('\033[2K')
@@ -383,5 +388,15 @@ while True:
         sys.stdout.flush()
         print("Update: Complete")
         bot_print("Amelia: l have been updated to the latest release")
+    elif re.search(r"clear", chat):
+         repeat = 0
+         while repeat < 6:
+            sys.stdout.write('\033[1A')
+            sys.stdout.write('\033[2K')
+            sys.stdout.flush()
+            repeat += 1
+         os.system('clear' if os == 'nt' else 'cls')
+
+         
     else:
         bot_print("Amelia: I'm sorry, l don't know how to respond to that")
