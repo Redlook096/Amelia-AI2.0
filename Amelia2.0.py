@@ -78,7 +78,7 @@ def bot_print(text):
     print()
 
 #Show program name and creator
-os.system('clear' if os == 'nt' else 'cls')
+os.system('clear' if os == 'nt' else 'cls' and "clear")
 bot_print("Amelia AI [Version 2.0.22631.4169]")
 time.sleep(0.1)
 bot_print("(c) Ace Coders. All rights reserved.")
@@ -395,7 +395,7 @@ while True:
             sys.stdout.write('\033[2K')
             sys.stdout.flush()
             repeat += 1
-         os.system('clear' if os == 'nt' else 'cls')
+         os.system('clear' if os == 'nt' else 'cls' and "clear")
 
          
     else:
