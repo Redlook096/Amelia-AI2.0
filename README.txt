@@ -64,8 +64,18 @@ COMMON ISSUES TO RESOLVE
 - Check internet connection when installing
 - Run terminal in Admin if you encounter acsess issues
 
+AMELIA AI 2.0 FEATURES
+- More Advanced user input matrix allowing AI to understand typos (compared to Amelia AI 1.0)
+- Updated with a password system for user's security
+- Do basic mathematics
+- Sensor innapropriate language
+- More advanced text printing 
+- Launch applications
+- Erase user data when needed
+
 DISCLAMER
 This project was created by myself which was inspired by another classmates project that l helped with. This project was using informaton that l researched to put together this chatbot.
 © 2024 Redlook096. All rights reserved.
 
 This work is protected under international and federal copyright laws and treaties. Any unauthorized use, reproduction, or distribution of this work is prohibited without express written permission from the copyright owner.
+
