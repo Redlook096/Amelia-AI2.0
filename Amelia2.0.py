@@ -8,7 +8,10 @@ import subprocess
 
 filename = 'username.txt'
 passfile = 'password.txt'
-
+def clear():
+    sys.stdout.write('\033[1A')
+    sys.stdout.write('\033[2K')
+    sys.stdout.flush()
 def restart():
     subprocess.run(['python', 'Amelia_runner.py'])
 
@@ -78,7 +81,7 @@ def bot_print(text):
     print()
 
 #Show program name and creator
-os.system('clear' if os == 'nt' else 'cls' and "clear")
+os.system('clear' if os == 'nt' else 'cls')
 bot_print("Amelia AI [Version 2.0.22631.4169]")
 time.sleep(0.1)
 bot_print("(c) Ace Coders. All rights reserved.")
@@ -203,8 +206,9 @@ else:
         print("Enter Password: ******")
         with open(passfile, 'w') as file:
             file.write(password)
-        bot_print(f"Amelia: How can l assist you?")
-
+        bot_print(f"Amelia: Hello there {username}, l am Amelia, your Artificial assistant and l am runned locally on your machine")
+        bot_print("Amelia: For any troubleshoots, please look at README.txt file")
+        bot_print("Amelia: How can l assist you")
 
 #Conversation Matrix Script
 while True: 
@@ -397,6 +401,37 @@ while True:
             repeat += 1
          os.system('clear' if os == 'nt' else 'cls' and "clear")
 
-         
+    elif re.search(r"run app", chat):
+        bot_print("Amelia: Please enter the application name to launch")
+        bot_print("Application: ")
+        sys.stdout.write('\033[1A')
+        sys.stdout.write('\033[2K')
+        sys.stdout.flush()
+        app = input("Application (with path if needed): ")
+        try:
+            bot_print("Amelia: Launching App")
+            time.sleep(0.1)
+            os.startfile(app)
+        except FileNotFoundError:
+            bot_print(f"Amelia: '{app}' does not appear to be on your machine")
+        else:
+            pass
+    elif re.search(r"start app", chat):
+        bot_print("Amelia: Please enter the application name to launch")
+        bot_print("Application: ")
+        sys.stdout.write('\033[1A')
+        sys.stdout.write('\033[2K')
+        sys.stdout.flush()
+        app = input("Application (with path if needed): ")
+        try:
+            bot_print("Amelia: Launching App")
+            time.sleep(0.1)
+            os.startfile(app)
+        except FileNotFoundError:
+            bot_print(f"Amelia: '{app}' does not appear to be on your machine")
+        else:
+            pass
+
+
     else:
         bot_print("Amelia: I'm sorry, l don't know how to respond to that")
