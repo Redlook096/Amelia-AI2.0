@@ -74,9 +74,9 @@ AMELIA AI 2.0 FEATURES
 - Launch applications
 - Erase user data when needed
 
-LATEST UPDATE
-- New application launcher
-- Bug patches
+LATEST UPDATE - 12/03/2025
+- New application launcher - Amelia can now launch any application located locally on your machine
+- Bug patches - Fixing minor bugs l have come across in terms of the set up
 
 DISCLAMER
 This project was created by myself which was inspired by another classmates project that l helped with. This project was using informaton that l researched to put together this chatbot.
