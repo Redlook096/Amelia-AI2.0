@@ -36,6 +36,7 @@ LINUX - SETUP
 4) Type command: pip3 install tqdm
 5) Paste command: git clone https://github.com/Redlook096/Amelia-AI2.0.git
 6) Type command: mv Amelia-AI2.0 Amelia2.0
+7) Type command: sudo apt-get update && sudo apt-get install python3-tqdm
 
 LINUX - RUNNING FIlE
 
