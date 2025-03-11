@@ -74,6 +74,10 @@ AMELIA AI 2.0 FEATURES
 - Launch applications
 - Erase user data when needed
 
+LATEST UPDATE
+- New application launcher
+- Bug patches
+
 DISCLAMER
 This project was created by myself which was inspired by another classmates project that l helped with. This project was using informaton that l researched to put together this chatbot.
 © 2024 Redlook096. All rights reserved.
