@@ -84,7 +84,7 @@ def bot_print(text):
 os.system('clear' if os == 'nt' else 'cls')
 bot_print("Amelia AI [Version 2.0.22631.4169]")
 time.sleep(0.1)
-bot_print("(c) Ace Coders. All rights reserved.")
+bot_print("(c) Redlook096 2025. All rights reserved.")
 time.sleep(0.1)
 
 
