@@ -41,6 +41,7 @@ LINUX - SETUP
 LINUX - RUNNING FIlE
 
 1) Type command: cd Amelia2.0
+2) Type command: sudo snap install tqdm
 2) Type command: python3 Amelia2.0.py
 Now you are running our chatbot!
 
