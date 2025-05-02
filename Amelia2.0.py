@@ -234,6 +234,35 @@ while True:
         bot_print("Amelia: l am Amelia, your Artificual Intelligence assistant")
     elif "ok" in chat:
         pass
+    elif re.search(r"created you", chat):
+        bot_print("Amelia: l was developed by Redlook096 For information about him check his profile on github")
+        for i in tqdm(range(100), desc="Genrating link: ", ascii=" █"):
+            time.sleep(0.005)
+        clear()
+        print("Genrating link: 100%| https://github.com/Redlook096/About_Redlook096.git")
+        bot_print("Amelia: From here you can see basic information and contact details")
+    elif re.search(r"create you", chat):
+        bot_print("Amelia: l was developed by Redlook096 For information about him check his profile on github")
+        for i in tqdm(range(100), desc="Genrating link: ", ascii=" █"):
+            time.sleep(0.005)
+        clear()
+        print("Genrating link: 100%| https://github.com/Redlook096/About_Redlook096.git")
+        bot_print("Amelia: From here you can see basic information and contact details")
+    elif re.search(r"developed you", chat):
+        bot_print("Amelia: l was developed by Redlook096 For information about him check his profile on github")
+        for i in tqdm(range(100), desc="Genrating link: ", ascii=" █"):
+            time.sleep(0.005)
+        clear()
+        print("Genrating link: 100%| https://github.com/Redlook096/About_Redlook096.git")
+        bot_print("Amelia: From here you can see basic information and contact details")
+    elif re.search(r"develop you", chat):
+        bot_print("Amelia: l was developed by Redlook096 For information about him check his profile on github")
+        for i in tqdm(range(100), desc="Genrating link: ", ascii=" █"):
+            time.sleep(0.005)
+        clear()
+        print("Genrating link: 100%| https://github.com/Redlook096/About_Redlook096.git")
+        bot_print("Amelia: From here you can see basic information and contact details")
+
     elif re.search(r"\bgood\b", chat):
         bot_print("Amelia: Thats great to hear")
     elif re.search(r"\bgreat\b", chat):
